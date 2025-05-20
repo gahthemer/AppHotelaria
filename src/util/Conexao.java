@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class Conexao {
     private String driver = "com.mysql.cj.jdbc.Driver";
     //jdbc:mysql://localhost:3306/dbHotel
-    private String url = "jdbc:mysql://127.0.0.1:3306/dbHotel";
+    private String url = "jdbc:mysql://127.0.0.1:3306/Hotelaria";
     private String usuario = "dbaHotel";
     private String senha = "dbaHotel123";
 
@@ -28,6 +28,8 @@ public class Conexao {
         } catch (SQLException erro) {
             System.out.print("Erro ao conectar ao Banco de Dados " + erro);
             return null;
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }
