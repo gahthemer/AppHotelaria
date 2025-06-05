@@ -16,6 +16,7 @@ public class Conexao {
     private String url;
     private String usuario;
     private String senha ;
+    private Connection connection;
 
     public Conexao() {
         carregarConfiguracoes();

@@ -24,10 +24,10 @@ public class CadLogin extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Carregar imagens
-        Image imgIcon = new Image(getClass().getResourceAsStream("/view/img/Hotel_Transylvania_-_The_Television_Series_logo.png"));
-        Image imgVampire = new Image(getClass().getResourceAsStream("/view/img/icons8-vampiro-64.png"));
-        Image imgDarkMode = new Image(getClass().getResourceAsStream("/view/img/icons8-dia-e-noite-50.png"));
-        Image eyeIconImage = new Image(getClass().getResourceAsStream("/view/img/icons8-olho-30.png"));
+        Image imgIcon = new Image(getClass().getResourceAsStream("img/Hotel_Transylvania_-_The_Television_Series_logo.png"));
+        Image imgVampire = new Image(getClass().getResourceAsStream("img/icons8-vampiro-64.png"));
+        Image imgDarkMode = new Image(getClass().getResourceAsStream("img/icons8-dia-e-noite-50.png"));
+        Image eyeIconImage = new Image(getClass().getResourceAsStream("img/icons8-olho-30.png"));
 
         // Configuração do layout principal
         BorderPane mainPane = new BorderPane();
@@ -46,7 +46,7 @@ public class CadLogin extends Application {
 
         // Layout com imagem de fundo
         StackPane root = new StackPane();
-        root.setStyle("-fx-background-image: url('/view/img/wallpaper-gif-12.gif'); " +
+        root.setStyle("-fx-background-image: url('img/wallpaper-gif-12.gif'); " +
                 "-fx-background-repeat: stretch; -fx-background-size: cover;");
         root.getChildren().add(loginBox);
         root.setAlignment(Pos.CENTER_RIGHT);

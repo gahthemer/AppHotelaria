@@ -1,9 +1,7 @@
 package view.componetes;
 
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -25,17 +23,17 @@ public class painelbotoes extends HBox {
 
         inicializarComponentes();
 
-        ImageView iconCadastrar = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-signup-64.png")));
+        ImageView iconCadastrar = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/salvar.jpg")));
         iconCadastrar.setFitHeight(20);
         iconCadastrar.setFitWidth(20);
         btnCadastrar.setGraphic(iconCadastrar);
 
-        ImageView iconAtualizar = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-17372-0-73111-repetição-direita-43-setas-64.png")));
+        ImageView iconAtualizar = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/voltar.jpg")));
         iconAtualizar.setFitHeight(20);
         iconAtualizar.setFitWidth(20);
         btnAtualizar.setGraphic(iconAtualizar);
 
-        ImageView iconExcluir = new ImageView(new Image(getClass().getResourceAsStream("/view/img/delete48px.png")));
+        ImageView iconExcluir = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/x.jpg")));
         iconExcluir.setFitHeight(20);
         iconExcluir.setFitWidth(20);
         btnExcluir.setGraphic(iconExcluir);

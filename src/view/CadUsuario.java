@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -19,12 +18,9 @@ public class CadUsuario extends Application {
 
     @Override
     public void start(Stage janela) throws Exception {
-        // Carregar imagens
-        Image imgBtnCad = new Image(getClass().getResourceAsStream("/view/img/icons8-signup-64.png"));
-        Image imgBtnUp = new Image(getClass().getResourceAsStream("/view/img/icons8-17372-0-73111-repetição-direita-43-setas-64.png"));
-        Image imgBtnDel = new Image(getClass().getResourceAsStream("/view/img/delete48px.png"));
-        Image imgIcon = new Image(getClass().getResourceAsStream("/view/img/Hotel_Transylvania_-_The_Television_Series_logo.png"));
-        Image imguser = new Image(getClass().getResourceAsStream("/view/img/icons8-vampiro-64.png"));
+
+        Image imgIcon = new Image(getClass().getResourceAsStream("/img/pessoa.jpg"));
+        Image imguser = new Image(getClass().getResourceAsStream("/img/quarto1.jpg"));
 
         BorderPane mainPane = new BorderPane();
 
@@ -96,7 +92,7 @@ public class CadUsuario extends Application {
 
         // Layout principal com fundo
         StackPane layout = new StackPane();
-        layout.setStyle("-fx-background-image: url('/view/img/Usuario-Hotel-Transylvania.jpeg'); -fx-background-repeat: stretch; -fx-background-size: cover");
+        layout.setStyle("-fx-background-image: url('/img/Hotel1.jpg'); -fx-background-repeat: stretch; -fx-background-size: cover");
         layout.getChildren().add(contentBox);
 
         // Adicionar o conteúdo central ao BorderPane

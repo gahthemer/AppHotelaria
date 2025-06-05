@@ -1,15 +1,11 @@
 package view.componetes;
 
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class MenuLateral extends VBox {
@@ -34,37 +30,37 @@ public class MenuLateral extends VBox {
 
         inicializarComponentes();
 
-        ImageView iconFuncionario = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-trabalhador-64.png")));
+        ImageView iconFuncionario = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/funcionario.jpg")));
         iconFuncionario.setFitHeight(20);
         iconFuncionario.setFitWidth(20);
         btnFuncionario.setGraphic(iconFuncionario);
 
-        ImageView iconRelatorio = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-relatório-100.png")));
+        ImageView iconRelatorio = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/up2.jpg")));
         iconRelatorio.setFitHeight(20);
         iconRelatorio.setFitWidth(20);
         btnRelatorio.setGraphic(iconRelatorio);
 
-        ImageView iconCliente = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-cliente-96.png")));
+        ImageView iconCliente = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/man.jpg")));
         iconCliente.setFitHeight(20);
         iconCliente.setFitWidth(20);
         btnCadCliente.setGraphic(iconCliente);
 
-        ImageView iconQuarto = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-interior-do-quarto-100.png")));
+        ImageView iconQuarto = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/quarto1.jpg")));
         iconQuarto.setFitHeight(20);
         iconQuarto.setFitWidth(20);
         btnCadQuarto.setGraphic(iconQuarto);
 
-        ImageView iconReserva = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-pendências-100.png")));
+        ImageView iconReserva = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/salvar.jpg")));
         iconReserva.setFitHeight(20);
         iconReserva.setFitWidth(20);
         btnCadReserva.setGraphic(iconReserva);
 
-        ImageView iconPorta = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-porta-aberta-100.png")));
+        ImageView iconPorta = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/porta.jpg")));
         iconPorta.setFitHeight(20);
         iconPorta.setFitWidth(20);
-        btnPorta.setGraphic(iconPorta);
+        btnPorta.setGraphic(iconReserva);
 
-        ImageView iconNoturno = new ImageView(new Image(getClass().getResourceAsStream("/view/img/icons8-dia-e-noite-50.png")));
+        ImageView iconNoturno = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/solelua.jpg")));
         iconNoturno.setFitHeight(20);
         iconNoturno.setFitWidth(20);
         btnnoturno.setGraphic(iconNoturno);
