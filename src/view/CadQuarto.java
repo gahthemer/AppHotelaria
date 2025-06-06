@@ -19,11 +19,8 @@ public class CadQuarto extends Application {
     @Override
     public void start(Stage janela) throws Exception {
         // Carregar imagens
-        Image imgBtnCad = new Image(getClass().getResourceAsStream("view/resources/img/icons8-signup-64.png"));
-        Image imgBtnUp = new Image(getClass().getResourceAsStream("view/resources/img/icons8-17372-0-73111-repetição-direita-43-setas-64.png"));
-        Image imgBtnDel = new Image(getClass().getResourceAsStream("view/resources/img/delete48px.png"));
-        Image imgIcon = new Image(getClass().getResourceAsStream("view/resources/img/Hotel_Transylvania_-_The_Television_Series_logo.png"));
-        Image imguser = new Image(getClass().getResourceAsStream("view/resources/img/icons8-vampiro-64.png"));
+        Image imgIcon = new Image(getClass().getResourceAsStream("/view/resources/img/hoteltransylvania.jpg"));
+        Image imguser = new Image(getClass().getResourceAsStream("/view/resources/img/vampiro.jpg"));
 
         BorderPane mainPane = new BorderPane();
 
@@ -88,7 +85,7 @@ public class CadQuarto extends Application {
 
         // Layout principal com fundo
         StackPane layout = new StackPane();
-        layout.setStyle("-fx-background-image: url('resources/img/Hotel-Transylvania.jpeg'); -fx-background-repeat: stretch; -fx-background-size: cover");
+        layout.setStyle("-fx-background-image: url('/view/resources/img/quarto.jpg'); -fx-background-repeat: stretch; -fx-background-size: cover");
         layout.getChildren().add(contentBox);
 
         // Adicionar o conteúdo central ao BorderPane

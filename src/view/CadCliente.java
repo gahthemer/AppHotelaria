@@ -23,11 +23,8 @@ public class CadCliente extends Application {
     public void start(Stage janela) throws Exception {
 
         // Carregar imagens
-        Image imgBtnCad = new Image(getClass().getResourceAsStream("icons8-signup-64.png"));
-        Image imgBtnUp = new Image(getClass().getResourceAsStream("icons8-17372-0-73111-repetição-direita-43-setas-64.png"));
-        Image imgBtnDel = new Image(getClass().getResourceAsStream("delete48px.png"));
-        Image imgIcon = new Image(getClass().getResourceAsStream("Hotel_Transylvania_-_The_Television_Series_logo.png"));
-        Image imguser = new Image(getClass().getResourceAsStream("icons8-vampiro-64.png"));
+        Image imgIcon = new Image(getClass().getResourceAsStream("/view/resources/img/hoteltransylvania.jpg"));
+        Image imguser = new Image(getClass().getResourceAsStream("/view/resources/img/vampiro.jpg"));
 
 
         BorderPane mainPane = new BorderPane();
@@ -41,7 +38,7 @@ public class CadCliente extends Application {
         Button btnModoNoturno = new Button();
         btnModoNoturno.setOnAction(e -> toggleDarkMode(mainPane));
         btnModoNoturno.setStyle("-fx-background-color: #5395DB;-fx-cursor: hand; -fx-text-fill: white;-fx-background-radius: 20;");
-        ImageView iconNoturno = new ImageView(new Image(getClass().getResourceAsStream("view/resources/img/icons8-dia-e-noite-50.png")));
+        ImageView iconNoturno = new ImageView(new Image(getClass().getResourceAsStream("/view/resources/img/solelua.jpg")));
         iconNoturno.setFitHeight(20);
         iconNoturno.setFitWidth(20);
         btnModoNoturno.setGraphic(iconNoturno);
@@ -101,7 +98,7 @@ public class CadCliente extends Application {
 
         // Layout principal com fundo
         StackPane layout = new StackPane();
-        layout.setStyle("-fx-background-image: url('imagetransylvania2.jpg'); -fx-background-repeat: stretch; -fx-background-size: cover;");
+        layout.setStyle("-fx-background-image: url('/view/resources/img/hotel2.jpg'); -fx-background-repeat: stretch; -fx-background-size: cover;");
         layout.getChildren().add(contentBox);
 
         // Adicionar o conteúdo central ao BorderPane
