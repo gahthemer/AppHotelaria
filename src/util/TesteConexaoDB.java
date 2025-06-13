@@ -18,16 +18,29 @@ public class TesteConexaoDB {
                 System.out.println("cliente Inserido com sucesso!");
 
                 RoleDAO roleDAO = new RoleDAO();
-                roleDAO.inserirRole();
+               // roleDAO.inserirRole();
+               // roleDAO.pesquisarRole();
+               // roleDAO.inserirRole();
+               // roleDAO.deletarRole();
+
 
                  QuartosDAO quartosDAO = new QuartosDAO();
-                 quartosDAO.inserirQuartos();
+               //  quartosDAO.inserirQuartos();
+                   quartosDAO.pesquisarQuartos();
+                 //quartosDAO.alterarQuartos();
+                // quartosDAO.deletarQuartos();
 
                  ClientesDAO clientesDAO = new ClientesDAO();
-                 clientesDAO.inserirClientes();
+                // clientesDAO.inserirClientes();
+                 clientesDAO.pesquisarCliente();
+                 clientesDAO.alterarCliente();
+               //  clientesDAO.deletarCliente();
 
-                 UsuariosDAO usuariosDAO = new UsuariosDAO();
-                 usuariosDAO.inserirUsuario();
+                UsuariosDAO usuariosDAO = new UsuariosDAO();
+                // usuariosDAO.inserirUsuario();
+                 usuariosDAO.pesquisarUsuario();
+                // usuariosDAO.alterarUsuario();
+                // usuariosDAO.deletarUsuario();
 
                 condb.close();
                 System.out.println("conexão encerrada!");

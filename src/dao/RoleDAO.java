@@ -24,4 +24,11 @@ public class RoleDAO {
                 return false;
             }
         }
+
+    public void pesquisarRole() {
     }
+
+    public void deletarRole() {
+
+    }
+}
