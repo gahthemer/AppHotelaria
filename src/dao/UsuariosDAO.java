@@ -68,8 +68,7 @@ public class UsuariosDAO {
     public void pesquisarUsuario() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement buscaUsuario = conndb.prepareStatement("SELECT nome, email" +
-                    " FROM usuarios WHERE cargo_id  = ?");
+            PreparedStatement buscaUsuario = conndb.prepareStatement("SELECT nome, email FROM usuarios WHERE cargo_id  = ?");
             buscaUsuario.setInt(1, 1);
             ResultSet resultado = buscaUsuario.executeQuery();
 

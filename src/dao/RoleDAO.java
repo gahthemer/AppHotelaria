@@ -45,7 +45,7 @@ public class RoleDAO {
             PreparedStatement removeRole = conndb.prepareStatement
                     ("DELETE FROM cargos WHERE id = ?;");
             removeRole.setInt(1, 1);
-            removeRole.setInt(1, 1);
+            removeRole.setInt(1, 2);
             int linhaAfetada = removeRole.executeUpdate();
             conndb.close();
             return linhaAfetada > 0;

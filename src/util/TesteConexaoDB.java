@@ -42,6 +42,12 @@ public class TesteConexaoDB {
                 // usuariosDAO.alterarUsuario();
                 // usuariosDAO.deletarUsuario();
 
+                PedidosDAO pedidosDAO = new PedidosDAO();
+               // pedidosDAO.inserirPedido();
+               // pedidosDAO.pesquisarPedido();
+               // pedidosDAO.alterarPedido();
+                //pedidosDAO.deletarPedido();
+
                 condb.close();
                 System.out.println("conexão encerrada!");
 
