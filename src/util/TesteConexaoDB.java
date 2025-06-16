@@ -14,31 +14,31 @@ public class TesteConexaoDB {
 
             try {
                 AdicionaisDAO adicionaisDAO = new AdicionaisDAO();
-                adicionaisDAO.inserirQuartos();
-                System.out.println("cliente Inserido com sucesso!");
+              //  adicionaisDAO.inserirQuartos();
+                //System.out.println("cliente Inserido com sucesso!");
 
                 RoleDAO roleDAO = new RoleDAO();
                // roleDAO.inserirRole();
                // roleDAO.pesquisarRole();
-               // roleDAO.inserirRole();
+                //roleDAO.alterarRole();
                // roleDAO.deletarRole();
 
 
                  QuartosDAO quartosDAO = new QuartosDAO();
                //  quartosDAO.inserirQuartos();
-                   quartosDAO.pesquisarQuartos();
+              //    quartosDAO.pesquisarQuartos();
                  //quartosDAO.alterarQuartos();
                 // quartosDAO.deletarQuartos();
 
                  ClientesDAO clientesDAO = new ClientesDAO();
                 // clientesDAO.inserirClientes();
-                 clientesDAO.pesquisarCliente();
-                 clientesDAO.alterarCliente();
+                // clientesDAO.pesquisarCliente();
+                // clientesDAO.alterarCliente();
                //  clientesDAO.deletarCliente();
 
                 UsuariosDAO usuariosDAO = new UsuariosDAO();
                 // usuariosDAO.inserirUsuario();
-                 usuariosDAO.pesquisarUsuario();
+               //  usuariosDAO.pesquisarUsuario();
                 // usuariosDAO.alterarUsuario();
                 // usuariosDAO.deletarUsuario();
 

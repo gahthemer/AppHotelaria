@@ -35,13 +35,14 @@ public class QuartosDAO {
     public boolean alterarQuartos() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement quartoAlterado  = conndb.prepareStatement("UPDATE quartos SET nome = ?, numero = ?,qnt_cama_casal,qnt_cama_solteiro,preco,disponivel"+"WHERE id = ?;");
+            PreparedStatement quartoAlterado  = conndb.prepareStatement("UPDATE quartos SET nome = ?, numero = ?,qnt_cama_casal = ?,qnt_cama_solteiro = ?,preco = ?,disponivel = ? WHERE id = ?;");
             quartoAlterado.setString(1, "Suite de luxo");
             quartoAlterado.setString(2, "15");
             quartoAlterado.setInt(3, 20);
             quartoAlterado.setInt(4, 20);
             quartoAlterado.setInt(5, 400);//Alterar usuário c/ chave primária ID=1
             quartoAlterado.setBoolean(6, true);
+            quartoAlterado.setInt(7, 1);
             int linhaAfetada = quartoAlterado.executeUpdate();
             conndb.close();
             return linhaAfetada > 0;
