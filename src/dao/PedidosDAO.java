@@ -13,12 +13,10 @@ import java.sql.ResultSet;
         public boolean inserirPedido() {
             try {
                 Connection conndb = conexao.conectar();
-                PreparedStatement novoPedido = conndb.prepareStatement(
-                        "INSERT INTO pedidos (usuario_id, cliente_id,data, pagamento) VALUES (?, ?, ?,?);"
-                );
-                novoPedido.setInt(1, 1);
-                novoPedido.setInt(2, 1);
-                novoPedido.setString(3, "06-07-2001");
+                PreparedStatement novoPedido = conndb.prepareStatement("INSERT INTO pedidos (usuario_id, cliente_id,data, pagamento) VALUES (?, ?, ?,?);");
+                novoPedido.setInt(1, 5);
+                novoPedido.setInt(2, 21);
+                novoPedido.setString(3, "2001-06-07");
                 novoPedido.setString(4, "pix");
 
                 int linhaAfetada = novoPedido.executeUpdate();
@@ -34,14 +32,12 @@ import java.sql.ResultSet;
         public boolean alterarPedido() {
             try {
                 Connection conndb = conexao.conectar();
-                PreparedStatement pedidoAlterado = conndb.prepareStatement(
-                        "UPDATE pedidos SET usuario_id = ?, cliente_id = ?, data = ?, pagamento = ? WHERE id = ?;"
-                );
-                pedidoAlterado.setInt(1, 1);
-                pedidoAlterado.setInt(2, 1);
+                PreparedStatement pedidoAlterado = conndb.prepareStatement("UPDATE pedidos SET usuario_id = ?, cliente_id = ?, data = ?, pagamento = ? WHERE id = ?;");
+                pedidoAlterado.setInt(1, 5);
+                pedidoAlterado.setInt(2, 21);
                 pedidoAlterado.setString(3, "2025-06-01");
                 pedidoAlterado.setString(4, "Pix");
-                pedidoAlterado.setInt(5, 1);
+                pedidoAlterado.setInt(5, 3);
 
                 int linhaAfetada = pedidoAlterado.executeUpdate();
                 conndb.close();
@@ -59,7 +55,7 @@ import java.sql.ResultSet;
                 PreparedStatement removePedido = conndb.prepareStatement(
                         "DELETE FROM pedidos WHERE id = ?;"
                 );
-                removePedido.setInt(1, 1);
+                removePedido.setInt(1, 3);
 
                 int linhaAfetada = removePedido.executeUpdate();
                 conndb.close();
@@ -74,10 +70,8 @@ import java.sql.ResultSet;
         public void pesquisarPedido() {
             try {
                 Connection conndb = conexao.conectar();
-                PreparedStatement buscaPedido = conndb.prepareStatement(
-                        "SELECT usuario_id, cliente_id, pagamento FROM pedidos WHERE id = ?"
-                );
-                buscaPedido.setInt(1, 1);
+                PreparedStatement buscaPedido = conndb.prepareStatement("SELECT usuario_id, cliente_id, pagamento FROM pedidos WHERE id = ?");
+                buscaPedido.setInt(1, 3);
 
                 ResultSet resultado = buscaPedido.executeQuery();
                 while (resultado.next()) {
