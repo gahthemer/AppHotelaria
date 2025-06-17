@@ -1,5 +1,6 @@
 package dao;
 
+import model.Usuario;
 import util.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -65,17 +66,17 @@ public class UsuariosDAO {
     }
 
     //Query SELECT
-    public void pesquisarUsuario() {
+    public void pesquisarUsuario(Usuario usuario) {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement buscaUsuario = conndb.prepareStatement("SELECT nome, email FROM usuarios WHERE cargo_id  = ?");
-            buscaUsuario.setInt(1, 1);
+            PreparedStatement buscaUsuario = conndb.prepareStatement("SELECT nome FROM usuarios WHERE email  = ? and senha = md5(?);");
+            buscaUsuario.setString(1, usuario.getEmail());
+            buscaUsuario.setString(2, usuario.getSenha());
             ResultSet resultado = buscaUsuario.executeQuery();
 
             while (resultado.next()) {
                 String nome = resultado.getString("nome");
-                String email = resultado.getString("email");
-                System.out.println("Nome: " + nome + " - Email: " + email);
+                System.out.println("Nome: " + nome);
             }
             conndb.close();
         }

@@ -8,6 +8,7 @@ import java.sql.Connection;
 public class TesteConexaoDB {
     public static void main(String[] args) {
         Conexao conexao = new Conexao();
+        Usuario usuario = new Usuario("Pamella","pamellapereto@gmail.com","1234",1);
         Connection condb = conexao.conectar();
         if (condb != null) {
             System.out.println("Conexão estabelecida com sucesso!");
@@ -38,7 +39,7 @@ public class TesteConexaoDB {
 
                 UsuariosDAO usuariosDAO = new UsuariosDAO();
                 // usuariosDAO.inserirUsuario();
-               //  usuariosDAO.pesquisarUsuario();
+                 usuariosDAO.pesquisarUsuario(usuario);
                 // usuariosDAO.alterarUsuario();
                 // usuariosDAO.deletarUsuario();
 
