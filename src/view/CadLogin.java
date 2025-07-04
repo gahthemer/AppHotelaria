@@ -1,5 +1,6 @@
 package view;
 
+import controle.UsuariosControllers;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -46,7 +47,7 @@ public class CadLogin extends Application {
 
         // Layout com imagem de fundo
         StackPane root = new StackPane();
-        root.setStyle("-fx-background-image: url('/view/resources/img/galaxia.jpg'); " +
+        root.setStyle("-fx-background-image: url('/view/resources/img/galaxiabonitinha.gif'); " +
                 "-fx-background-repeat: stretch; -fx-background-size: cover;");
         root.getChildren().add(loginBox);
         root.setAlignment(Pos.CENTER_RIGHT);
@@ -121,6 +122,20 @@ public class CadLogin extends Application {
                 "-fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 20;");
         btnLogin.setMaxWidth(Double.MAX_VALUE);
 
+        btnLogin.setOnAction(evento -> {
+            String email = txtEmail.getText();
+            String senha = pfSenha.isVisible() ? pfSenha.getText() : visiblePasswordField.getText();
+
+            UsuariosControllers usuarosControllers = new UsuariosControllers();
+            boolean loginSucesso = usuarosControllers.verificarCredenciais(email,senha);
+
+            if(loginSucesso){
+                System.out.println("Login bem-sucedido! Bem-vindo ao Hotel Transylvania!");
+            }else {
+                System.out.println("Credenciais inválidas! Tente novamente.");
+            }
+        });
+
         // Configuração do status
 
 
@@ -153,7 +168,7 @@ public class CadLogin extends Application {
         });
 
         // Ação do botão de login
-        btnLogin.setOnAction(e -> handleLogin());
+       //btnLogin.setOnAction(e -> handleLogin());
 
         return loginGrid;
     }
@@ -230,7 +245,6 @@ public class CadLogin extends Application {
                 "-fx-border-radius: 10px; -fx-background-radius: 10px; " +
                 "-fx-text-fill: white;");
     }
-
     public static void main(String[] args) {
         launch(args);
     }

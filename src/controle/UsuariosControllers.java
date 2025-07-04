@@ -1,6 +1,7 @@
 package controle;
 
 import dao.UsuariosDAO;
+import javafx.scene.paint.Color;
 import model.Usuario;
 
 public class UsuariosControllers {
@@ -19,3 +20,4 @@ public class UsuariosControllers {
         return usuariosDAO.autenticarUsuario(usuario);
     }
 }
+

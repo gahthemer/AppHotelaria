@@ -40,7 +40,7 @@ public class CadQuarto extends Application {
 
 
 
-        Label lblTitulo = new Label("Cadastro de Clientes");
+        Label lblTitulo = new Label("Cadastro do Quarto");
         lblTitulo.setAlignment(Pos.CENTER);
         lblTitulo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
 
@@ -50,15 +50,16 @@ public class CadQuarto extends Application {
 
         Label lblNome = new Label("Nome: ");
         TextField txtNome = new TextField();
-        Label lblCPF = new Label("CPF: ");
-        TextField txtCPF = mascara("###.###.###-##");
-        Label lblEmail = new Label("E-mail: ");
-        TextField txtEmail = new TextField();
-        ComboBox<String> bootemail = new ComboBox<>();
-        bootemail.getItems().addAll("@gmail.com", "@yahoo.com", "hotmail.com");
-        bootemail.setPromptText("Selecione:");
-        Label lblTel = new Label("Telefone: ");
-        TextField txtTel = mascara("(##)####-#####");
+        Label lblnumero = new Label("numero: ");
+        TextField txtnumero =new TextField();
+        Label lblqnt_cama_casal = new Label("cama casal: ");
+        TextField txtcasal = new TextField();
+        Label lblqnt_cama_solteiro = new Label("cama casal: ");
+        TextField txtsolteiro = new TextField();
+        Label lPreco = new Label("cama casal: ");
+        TextField txtpreco = new TextField();
+        Label lblDisponivel = new Label("cama casal: ");
+        TextField txtdisponivel = new TextField();
 
         GridPane formGrid = new GridPane();
         formGrid.setAlignment(Pos.CENTER);
@@ -66,13 +67,26 @@ public class CadQuarto extends Application {
         formGrid.setVgap(10);
         formGrid.add(lblNome, 0, 0);
         formGrid.add(txtNome, 1, 0);
-        formGrid.add(lblCPF, 0, 1);
-        formGrid.add(txtCPF, 1, 1);
-        formGrid.add(lblEmail, 0, 2);
-        formGrid.add(txtEmail, 1, 2);
-        formGrid.add(bootemail, 2, 2);
-        formGrid.add(lblTel, 0, 3);
-        formGrid.add(txtTel, 1, 3);
+        formGrid.add(lblnumero, 0, 1);
+        formGrid.add(txtnumero, 1, 1);
+        formGrid.add(lblqnt_cama_casal, 0, 2);
+        formGrid.add(txtcasal, 1, 2);
+        formGrid.add(lblqnt_cama_solteiro, 0, 3);
+        formGrid.add(txtsolteiro, 1, 3);
+        formGrid.add(lPreco, 0, 4);
+        formGrid.add(txtpreco, 1, 4);
+        formGrid.add(lblDisponivel, 0, 5);
+        formGrid.add(txtdisponivel, 1, 5);
+
+        botoes.getBtnCadastrar().setOnAction(e -> {
+            String nome = txtNome.getText();
+            String numero = txtnumero.getText();
+            double preco = Double.parseDouble(txtpreco.getText());
+            int qnt_casal = Integer.parseInt(txtcasal.getText());
+            int qnt_cama_solteiro = Integer.parseInt(txtsolteiro.getText());
+            String disponivel = (String)txtdisponivel.getText();
+        });
+
 
 
         // Criando um painel para envolver o conteúdo

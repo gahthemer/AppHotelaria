@@ -1,5 +1,6 @@
 package dao;
 
+import model.Quarto;
 import util.Conexao;
 
 import java.sql.Connection;
@@ -9,7 +10,7 @@ import java.sql.ResultSet;
 public class QuartosDAO {
         private Conexao conexao = new Conexao();
 
-        public boolean inserirQuartos() {
+        public boolean inserirQuartos(Quarto quarto) {
 
             try{
                 Connection conndb = conexao.conectar();
